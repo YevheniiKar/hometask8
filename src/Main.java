@@ -1,51 +1,4 @@
 import java.util.Scanner;
-
-abstract class Shape {
-    abstract String getName();
-}
-
-class Circle extends Shape {
-    @Override
-    String getName() {
-        return "Circle";
-    }
-}
-
-class Quad extends Shape {
-    @Override
-    String getName() {
-        return "Quad";
-    }
-}
-
-class Triangle extends Shape {
-    @Override
-    String getName() {
-        return "Triangle";
-    }
-}
-
-class Square extends Shape {
-    @Override
-    String getName() {
-        return "Square";
-    }
-}
-
-class Ellipse extends Shape {
-    @Override
-    String getName() {
-        return "Ellipse";
-    }
-}
-
-class Polygon extends Shape {
-    @Override
-    String getName() {
-        return "Polygon";
-    }
-}
-
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -84,7 +37,7 @@ class Main {
                 System.out.println("Invalid choice");
                 return;
         }
-
-        System.out.println("Shape's name: " + shape.getName());
+        Out_shape out = new Out_shape();
+        out.printShapeName(shape);
     }
 }
